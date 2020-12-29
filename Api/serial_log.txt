@@ -1,0 +1,60 @@
+[1547] Connected to WiFi
+[1547] IP: 192.168.43.44
+[1547]
+    ___  __          __
+   / _ )/ /_ _____  / /__
+  / _  / / // / _ \/  '_/
+ /____/_/\_, /_//_/_/\_\
+        /___/ v0.6.1 on ESP8266
+
+[1553] Connecting to blynk-cloud.com:80
+[1904] Ready (ping: 153ms).
+Humidity: 55.00
+Temperature: 26.90
+Humidity: 55.00
+Temperature: 26.90
+Humidity: 52.00
+Temperature: 26.90
+Humidity: 52.00
+Temperature: 26.90
+Humidity: 55.00
+Temperature: 27.00
+Humidity: 55.00
+Temperature: 27.00
+Humidity: 55.00
+Temperature: 27.00
+Humidity: 55.00
+Temperature: 27.00
+Humidity: 54.00
+Temperature: 27.00
+Humidity: 54.00
+Temperature: 27.00
+Humidity: 54.00
+Temperature: 27.00
+Humidity: 54.00
+Temperature: 27.00
+Humidity: 54.00
+Temperature: 27.00
+Humidity: 54.00
+Temperature: 27.00
+Humidity: 54.00
+Temperature: 27.00
+Humidity: 54.00
+Temperature: 27.00
+Humidity: 54.00
+Temperature: 27.00
+Humidity: 54.00
+Temperature: 27.00
+Humidity: 54.00
+Temperature: 27.00
+Humidity: 54.00
+Temperature: 27.00
+Humidity: 54.00
+Temperature: 27.00
+Humidity: 54.00
+Temperature: 27.00
+Humidity: 54.00
+Temperature: 27.00
+Humidity: 54.00
+Temperature: 27.00
+---Completed---
