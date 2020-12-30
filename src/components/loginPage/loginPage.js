@@ -16,7 +16,17 @@ import BImage from '../Images/BackgroundImage.png';
 import { Form } from 'react-bootstrap';
 
 <meta name="viewport" content="width=device-width" />
-
+// const response = axios({
+//     url: 'http://localhost:5000/api/login',
+//     data: {"email": "mjawad.nust@gmail.com", "password":"1243"},    
+//     method: 'POST'
+//   }).then(response => {
+// var testing = JSON.stringify(response);
+//   window.alert(testing);
+//   console.log(testing);
+//   }).catch(error => {
+//     window.alert(error);
+//   });
 class LoginPage extends Component {
     constructor(props) {
         super(props);
@@ -28,36 +38,56 @@ class LoginPage extends Component {
         this.login = this.login.bind(this);
     }
     login = async ()=>  {
+
+        
         window.alert('login function is clicked');
-        let email = await document.getElementById('emaillogin').value;
-        let password = await document.getElementById('pwdlogin').value;
+        var email = await document.getElementById('emaillogin').value;
+        var password = await document.getElementById('pwdlogin').value;
         window.alert(email);
         window.alert(password);
-        var data = JSON.stringify({"username":email,"password":password});
+         var data = JSON.stringify({"username":email, "password":password});
+            
+        
         window.alert(data);
         
-    axios(config)
-        .then(function (response) {
-            window.alert("axios then called");
-           let value = JSON.stringify(response.data);
-        //    window.alert(value);
-            //this.setState(value)
-          })
-         
-
-        .catch(function (error) {
-            window.alert(error);
-        }); 
-        var config = {
+        axios({
             method: 'post',
             url: 'http://localhost:5000/api/login',
+            data: data,    
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                "Access-Control-Allow-Origin": "*"
             }
-            ,
-            
-            data : data
-        };
+          }).then(response => {
+            var testing = JSON.stringify(response);
+              window.alert(testing);
+              console.log(testing);
+              }).catch(error => {
+                window.alert(error);
+              });
+    // axios(config)
+    //     .then(function (response) {
+    //         window.alert("axios then called");
+    //        let value = JSON.stringify(response.data);
+    //        console.log('Axios:',response);
+    //         console.log('Axios data:',response.data);
+    //     //    window.alert(value);
+    //         //this.setState(value)
+    //       }).catch(function (error) {
+    //         window.alert(error);
+    //     }); 
+
+        // var config = {
+        //     method: 'POST',
+        //     url: 'http://localhost:5000/api/login',
+        //     headers: {
+        //         'Content-Type': 'application/json ; charset=UTF-8; application/x-www-form-urlencoded',
+        //         "Access-Control-Allow-Origin": "*"
+        //     }
+        //     ,
+        //  data: {"email": "mjawad.nust@gmail.com", "password":"1243"},    
+
+        // };
 }
 
     render() {
