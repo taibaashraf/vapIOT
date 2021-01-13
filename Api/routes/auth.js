@@ -33,4 +33,9 @@ var corsOptions = {
 router.post('/register',cors(corsOptions), AuthController.register)
 router.post('/login',cors(corsOptions), AuthController.login)
 router.get('/',cors(corsOptions), AuthController.getlogin)
+router.get('/compiler/exec_trainer1/iot1',cors(corsOptions), AuthController.exec_trainer1_iot1)
+router.get('/get_firebase_app',cors(corsOptions), AuthController.get_firebase_app)
+router.post('/serialdata',cors(corsOptions), AuthController.serialdata)
+router.post('/compile',cors(corsOptions), AuthController.compile)
+
 module.exports = router

@@ -1,4 +1,5 @@
 var createError = require('http-errors');
+var bodyParser = require('body-parser');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
@@ -6,13 +7,15 @@ var logger = require('morgan');
 const mongoose = require('mongoose');
 const passport = require('passport');
 const flash = require('connect-flash');
-var cors = require('cors')
+var cors = require('cors');
+//var firebase = require("firebase");
+
 //var indexRouter = require('./routes/index');
 //  var usersRouter = require('./routes/users');
 //  var serialRouter = require('./routes/serial');
 
 var app = express();
-
+ 
 
 // app.listen('5000', (err)=>{
 //   if(err){
@@ -38,7 +41,7 @@ mongoose
   .catch(err => console.log(err));
 
 
-
+//app.use(bodyparser());
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -149,5 +152,44 @@ app.listen('5000', (err) => {
 //   //let view = __dirname+
 //   //res.send(__dirname+);
 // });
+// <!-- The core Firebase JS SDK is always required and must be listed first -->
+// <script src="/__/firebase/8.2.1/firebase-app.js"></script>
+
+// <!-- TODO: Add SDKs for Firebase products that you want to use
+//      https://firebase.google.com/docs/web/setup#available-libraries -->
+// <script src="/__/firebase/8.2.1/firebase-analytics.js"></script>
+
+// <!-- Initialize Firebase -->
+// <script src="/__/firebase/init.js"></script>
+
+
+
+
+// Add the Firebase products that you want to use
+// require("firebase/auth");
+// require("firebase/firestore");
+
+// const firebaseConfig = {
+//     apiKey: "AIzaSyD_yBImzc5tWwfWfiCR0WWP3Bk0dQpUd2s",
+//     authDomain: "serial-data-node.firebaseapp.com",
+//     projectId: "serial-data-node",
+//     storageBucket: "serial-data-node.appspot.com",
+//     messagingSenderId: "458814118167",
+//     appId: "1:458814118167:web:bc9b85b0fd230f83bd3f52",
+//     measurementId: "G-RNR5VJSD1S"
+//   };
+//   firebase.initializeApp(firebaseConfig);
+//   var database = firebase.database();
+//   function writeUserData(userId) {
+//     firebase.database().ref('users/' + userId).set({
+//       username: "jawad",
+//       email: "mjawad.nust@gmail.com"
+      
+//     });
+//     console.log("data should be gone for now");
+//   }
+//   writeUserData();
+
+
 
 module.exports = app;
